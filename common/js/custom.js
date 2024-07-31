@@ -1,5 +1,5 @@
 
-/***********Header stickey********** */
+/***********stickey********** */
 
 $(window).scroll(function() {
   if ($(this).scrollTop() > 1){  
@@ -10,6 +10,28 @@ $(window).scroll(function() {
     }
   });
 
+  //$(window).scroll(function() {
+    //if ($(this).scrollTop() > 58){  
+     //   $('.booking-box').addClass("sticky");
+     // }
+   //   else{
+      //  $('.booking-box').removeClass("sticky");
+     // }
+    //});
+
+
+   //$(window).scroll(function() {
+    //  if ($(this).scrollTop() > 300){  
+     //     $('.two-part-layout aside').addClass("sticky");
+     //   }
+       // else{
+       //  $('.two-part-layout aside').removeClass("sticky");
+       // }
+      //});
+
+
+
+  
 /************************************ */
 
 
@@ -153,16 +175,16 @@ $( document ).ready(function() {
 
     $('.filter-row .sort').click(function(){
       $('.sort-box').css({
-        'opacity': '1',
-        'z-index': '9'
+        'display': 'block'
+       
       });
       
       });
     
       $('.sort-box .close-icon').click(function(){
         $('.sort-box').css({
-          'opacity': '0',
-          'z-index': '-1'
+          'display': 'none',
+          
         });
         });
 
@@ -197,8 +219,47 @@ $(function () {
 });
 
 
+/***************Drop down*****************/
+$(function () {
+  $(".select-box .info.edit").click(function () {
+  $('.select-box .info').not(this).removeClass('open');
+    $(this).toggleClass("open");
+    
+  }); 
 
 
+});
+/*************************************** */
+$(document).ready(function() {
+  $(".slider").click(function () {
+    $(".export").toggleClass("active");
+   
+  });
+});
 
+/********************************/
+$(document).ready(function() {
+$('.login-signup').click(function(){
+   $('body').addClass('fixed');
+   $('.login-signup-container').css("top", "50%");
+  });
+  $('.login-signup-container .close-icon').click(function(){
+    $('.login-signup-container').css("top", "-1200px");
+    $('body').removeClass('fixed')
+    });
 
+$('#get-otp').click(function(){
+  $('#step1').css("display","none")
+$('#step2').css("display","block")
+});
+
+$('#continue').click(function(){
+  $('#step2').css("display","none")
+$('#step3').css("display","block")
+$('.otp-verified').animate({
+  top: "-81px",
+  }, 100);
+});
+});
+/*******************************/
 

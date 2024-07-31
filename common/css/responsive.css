@@ -76,7 +76,11 @@ ul.sub-header-tabs li {
 }
 .filter-row {margin: 20px 0;}
 .two-part-layout{display:flex; flex-direction: column;}
-.two-part-layout aside {width: 100%;}
+.two-part-layout aside {
+	width: 100%;
+	position: static;
+	height: auto;
+}
 .side-bar h3{padding:15px;}
 .service-link{padding:0;}
 .sidebar-service{padding:10px 0;}
